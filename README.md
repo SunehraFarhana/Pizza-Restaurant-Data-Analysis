@@ -125,40 +125,72 @@ An in-depth [**Jupyter Notebook**](https://github.com/SunehraFarhana/Pizza-Resta
 ## Exploratory Data Analysis in MySQL Workbench
 These SQL queries were used to reveal data trends and give guidance towards assembling visualizations.
 
-### 1. 
+### 1. What is the total number of orders and total revenue?
 ```sql
-
+SELECT 
+    COUNT(*) AS total_orders,
+    SUM(menu_item_quantity) AS total_units_sold,
+    ROUND(SUM(menu_item_price * menu_item_quantity), 2) AS total_revenue
+FROM pizza_restaurant_schema.pizza_restaurant_dataset_cleaned;
 ```
+<img width="252" height="60" alt="pizza_restaurant_sql_1" src="https://github.com/user-attachments/assets/c9980fce-c45a-4bf3-9464-ab81cd39e469" />
 
-
-
-### 2. 
+### 2. What is the total number of orders per delivery status? What percent of orders are delivery?
 ```sql
-
+SELECT
+    CASE
+        WHEN delivery = 'Yes' THEN 'Yes'
+        WHEN delivery = 'No' THEN 'No'
+        ELSE 'Unknown'
+    END AS delivery_status,
+    COUNT(*) AS order_count,
+    ROUND(
+        COUNT(*) * 100.0 /
+        (SELECT COUNT(*) 
+         FROM pizza_restaurant_schema.pizza_restaurant_dataset_cleaned),
+    2) AS pct_of_orders
+FROM pizza_restaurant_schema.pizza_restaurant_dataset_cleaned
+GROUP BY delivery_status;
 ```
+<img width="254" height="76" alt="pizza_restaurant_sql_2" src="https://github.com/user-attachments/assets/bf65822c-71d3-4987-bb06-7d247765cdbf" />
 
-
-
-### 3. 
+### 3. What is the order count, units sold, and revenue by month? Which month had the highest revenue?
 ```sql
-
+SELECT
+    MONTHNAME(order_date) AS month,
+    COUNT(*) AS order_count,
+    SUM(menu_item_quantity) AS units_sold,
+    ROUND(SUM(menu_item_price * menu_item_quantity), 2) AS revenue
+FROM pizza_restaurant_schema.pizza_restaurant_dataset_cleaned
+GROUP BY month
+ORDER BY revenue DESC;
 ```
+<img width="270" height="225" alt="pizza_restaurant_sql_3" src="https://github.com/user-attachments/assets/41f0812c-b6f2-46bb-891e-92c0cf61e30e" />
 
-
-
-### 4. 
+### 4. Which menu item sold the most units? Which menu item generated the most revenue?
 ```sql
-
+SELECT
+    menu_item_name,
+    SUM(menu_item_quantity) AS units_sold,
+    ROUND(SUM(menu_item_price * menu_item_quantity), 2) AS revenue
+FROM pizza_restaurant_schema.pizza_restaurant_dataset_cleaned
+GROUP BY menu_item_name
+ORDER BY revenue DESC;
 ```
+<img width="287" height="316" alt="pizza_restaurant_sql_4" src="https://github.com/user-attachments/assets/403c41d3-2f19-428f-9360-d40bcf58076a" />
 
-
-
-### 5. 
+### 5. Who are the most frequent customers, and how much money have they spent on orders?
 ```sql
-
+SELECT
+    customer_name,
+    COUNT(*) AS order_count,
+    ROUND(SUM(menu_item_price * menu_item_quantity),2) AS total_money_spent
+FROM pizza_restaurant_schema.pizza_restaurant_dataset_cleaned
+GROUP BY customer_name
+ORDER BY order_count DESC
+LIMIT 15;
 ```
-
-
+<img width="293" height="270" alt="pizza_restaurant_sql_5" src="https://github.com/user-attachments/assets/322e8491-44b0-4096-a190-c068fe47ad0a" />
 
 An in-depth [**SQL file**](https://github.com/SunehraFarhana/Grocery-Store-Data-Analysis/blob/fe73ad85b58a864adccbeefbe60aeca58f62452a/grocery_store_queries.sql) detailing every step of the querying process is available in this repository.
 
