@@ -192,7 +192,7 @@ LIMIT 15;
 ```
 <img width="293" height="270" alt="pizza_restaurant_sql_5" src="https://github.com/user-attachments/assets/322e8491-44b0-4096-a190-c068fe47ad0a" />
 
-An in-depth [**SQL file**](https://github.com/SunehraFarhana/Grocery-Store-Data-Analysis/blob/fe73ad85b58a864adccbeefbe60aeca58f62452a/grocery_store_queries.sql) detailing every step of the querying process is available in this repository.
+An in-depth [**SQL file**](https://github.com/SunehraFarhana/Pizza-Restaurant-Data-Analysis/blob/be4c76d8fe5b8dcb31fbdb1182698af518e6ae81/pizza_restaurant_queries.sql) detailing every step of the querying process is available in this repository.
 
 ---
 ## Visualizations in Tableau Public
