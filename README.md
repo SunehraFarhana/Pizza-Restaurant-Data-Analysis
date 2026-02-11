@@ -196,7 +196,9 @@ An in-depth [**SQL file**](https://github.com/SunehraFarhana/Pizza-Restaurant-Da
 
 ---
 ## Visualizations in Tableau Public
-The Tableau Public visualizations can be found [**here**](https://public.tableau.com/views/grocery_store_visualizations/Start?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link). 
+The Tableau Public visualizations can be found [**here**](https://public.tableau.com/views/pizza_restaurant_visualizations/Dashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link). 
+
+<img width="1399" height="599" alt="pizza_restaurant_visualizations_dashboard" src="https://github.com/user-attachments/assets/d4390a14-29f4-4243-a3cf-c361ab100833" />
 
 ---
 ## Project Insight and Recommendations
