@@ -1,8 +1,9 @@
 # Pizza Restaurant Data Analysis
+The orders dataset of a Little Caesars restaurant isn't simply a record of a it's transactions over a period of time. Pizza restaurant order data is highly valuable because it reveals customer demand patterns, seasonal trends, product performance, and ordering behavior.
 
+This raw order data can be used to pinpoint the areas in which sales volume and revenue are highest, thus allowing restaurant stakeholders to make informed decisions around promotions, menu strategy, delivery operations, and customer retention programs.
 
-**BUSINESS PROBLEM:** 
-
+**BUSINESS PROBLEM:** When are order volume and revenue the highest? Which menu items generate the most demand? Are there product trends that suggest promotional opportunities?
 
 ---
 ## Table of Contents
@@ -16,11 +17,11 @@
 
 ---
 ## Project Overview
-
+This project analyzes 2024 order data from a Little Caesars restaurant in Brooklyn, New York to uncover meaningful trends in customer preferences and ordering behavior. Raw transactional data was transformed into actionable insights that support strategic business decisions for this pizza restaurant, through data cleaning in Python, SQL querying, and an interactive Tableau dashboard visualization.
 
 ---
 ## Dataset Summary
-The synthetic dataset can be found [**here**](https://github.com/SunehraFarhana/Pizza-Restaurant-Data-Analysis/blob/6dd22a54ee1f235bb2550b9235c5feff20fc96af/pizza_restaurant_dataset_raw.csv). 
+The synthetic dataset can be found [**here**](https://github.com/SunehraFarhana/Pizza-Restaurant-Data-Analysis/blob/6dd22a54ee1f235bb2550b9235c5feff20fc96af/pizza_restaurant_dataset_raw.csv). Each row represents an order fulfilled by this Little Caesars restaurant in 2024, and contains information about that order.
 * **Size (Before Cleaning):** 5,050 rows, 11 columns
 	* **Size (After Cleaning):** 5,050 rows, 10 columns
 * **Restaurant Data:** Order ID, Order Date, Menu Item Name, Menu Item Category, Menu Item Price, Menu Item Size, Menu Item Quantity, Customer First Name, Customer Last Name, Delivery, Delivery Address
@@ -28,7 +29,7 @@ The synthetic dataset can be found [**here**](https://github.com/SunehraFarhana/
 
 ---
 ## Data Cleaning and Feature Engineering in Python
-This dataset had many typos and mistakes within the columns, which were corrected during the data cleaning process.
+This dataset contained many typos and mistakes within the columns, which were corrected throughout the data cleaning process.
 
 ### 1. Some values in the **`menu_item_category`**, **`menu_item_size`**, and **`delivery`** columns have typos, or are recorded in an inconsistent manner. The values within these columns will be corrected and simplified, in order to ensure accurate data when querying and making visualizations:
 * **`menu_item_category`** → Convert all records to either **`Pizza`**, **`Sides`**, **`Wings`**, or **`Beverage`**
@@ -196,7 +197,9 @@ An in-depth [**SQL file**](https://github.com/SunehraFarhana/Pizza-Restaurant-Da
 
 ---
 ## Visualizations in Tableau Public
-The Tableau Public visualizations can be found [**here**](https://public.tableau.com/views/pizza_restaurant_visualizations/Dashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link). 
+The Tableau Public visualizations can be found [**here**](https://public.tableau.com/views/pizza_restaurant_visualizations/Dashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link).
+
+The data was organized into one interactive dashboard, which highlights the most relevant information about product trends and buyer behavior. Users can easily see the menu item factors that generated the most revenue, and the times where sales volume was the highest. They can also toggle between menu item categories and see, for example, around which time of year beverages were more popular with customers.
 
 <img width="1399" height="599" alt="pizza_restaurant_visualizations_dashboard" src="https://github.com/user-attachments/assets/d4390a14-29f4-4243-a3cf-c361ab100833" />
 
@@ -207,4 +210,4 @@ After cleaning the csv file, doing exploratory data analysis, and creating visua
 
 ---
 ## Conclusion
-
+This project demonstrates how pizza restaurant order data can be transformed into meaningful business intelligence and strategic insight. By identifying seasonal demand patterns, top-performing products, and heavy delivery reliance, Little Caesars can make practical business decisions that enhance profitability, customer satisfaction, and operational efficiency. This analysis provides a strong foundation for future initiatives that help the restaurant better serve its customers while maximizing its revenue.
