@@ -124,7 +124,7 @@ An in-depth [**Jupyter Notebook**](https://github.com/SunehraFarhana/Pizza-Resta
 
 ---
 ## Exploratory Data Analysis in MySQL Workbench
-These SQL queries were used to reveal data trends and give guidance towards assembling visualizations.
+These SQL queries were used to reveal order data trends and give guidance towards assembling visualizations that pinpoint areas in which Little Caesars could strategize to maximize revenue.
 
 ### 1. What is the total number of orders and total revenue?
 ```sql
@@ -205,8 +205,30 @@ The data was organized into one interactive dashboard, which highlights the most
 
 ---
 ## Project Insight and Recommendations
-After cleaning the csv file, doing exploratory data analysis, and creating visualizations, the restaurant data reveals that:
+After cleaning the csv file, doing exploratory data analysis, and creating visualizations, the 2024 Little Caesars order data reveals that:
 
+* 🏖 **1. INSIGHT:** Sales spike significantly during **June and December**, likely driven by holidays, school breaks, and pre-vacation gatherings. Also, order volume and total units sold are higher on **weekends**, indicating increased demand during leisure and social time.
+  * ↳ **RECOMMENDATION:** Meet High Demand Without Sacrificing Quality → **Optimize Staffing and Inventory for Peak Periods**
+	  * Prepare for higher demand on **weekends, June, and December**
+      * Adjust staffing, dough prep, and ingredient availability accordingly
+* 📅 **2. INSIGHT:** Beverage purchases increase **May through August**, aligning with warm summer weather and higher cold-drink demand.
+  * ↳ **RECOMMENDATION:** Capitalize on Seasonal Buying Behavior → **Expand Seasonal Beverage Promotions**
+	  * Promote **large pizza + 2L drink bundles** for summer months
+	  * Promote summer combo specials
+* 🍕 **3. INSIGHT:** Pizza overwhelmingly outperforms sides, wings, and beverages, making it the **core revenue driver**. Also, **pepperoni and cheese pizzas** are the most popular menu items. In addition, **large-sized menu items** are ordered more frequently than small or regular sizes.
+  * ↳ **RECOMMENDATION:** Customers Favor Traditional Offerings and Large Orders → **Focus Marketing on Best-Selling Items**
+	  * Highlight popular menu items like **Classic Pepperoni** and **ExtraMostBestest Cheese Pizzas** in marketing campaigns
+	  * Promote large-size combo deals aimed at families, parties, and group orders
+	  * Offer **size-upgrade discounts**
+* 🚚 **4. INSIGHT:** Delivery is the dominant ordering method, with **65.88% of orders being delivery**.
+  * ↳ **RECOMMENDATION:** Delivery Speed Impacts Customer Satisfaction → **Improve Delivery Efficiency**
+	  * Optimize driver staffing and scheduling
+	  * Offer **delivery promos on slow days** (*ex: 20% discount on Tuesdays, Wednesdays, and Thursdays*)
+* 👥 **5. INSIGHT:** A significant number of customers placed **multiple orders** throughout 2024, with some ordering up to **18 times in one year**.
+  * ↳ **RECOMMENDATION:** Evidence of Repeat Customers → **Introduce a Loyalty or Rewards Program**
+	  * Launch a **points-per-order program**
+	  * Offer one free pizza **after 10 purchases**
+	  * Offer free beverage, wings, or sides add-ons
 
 ---
 ## Conclusion
