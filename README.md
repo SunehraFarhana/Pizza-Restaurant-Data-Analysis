@@ -21,7 +21,7 @@ This project analyzes 2024 order data from a Little Caesars restaurant in Brookl
 
 ---
 ## Dataset Summary
-The synthetic dataset can be found [**here**](https://github.com/SunehraFarhana/Pizza-Restaurant-Data-Analysis/blob/6dd22a54ee1f235bb2550b9235c5feff20fc96af/pizza_restaurant_dataset_raw.csv). Each row represents an order fulfilled by this Little Caesars restaurant in 2024, and contains information about that order.
+The synthetic dataset can be found [**here**](https://github.com/SunehraFarhana/Pizza-Restaurant-Data-Analysis/blob/e1c65378cdf4d8f660f81edbe649bc66c59304f4/pizza_restaurant_dataset_raw.csv). Each row represents an order fulfilled by this Little Caesars restaurant in 2024, and contains information about that order.
 * **Size (Before Cleaning):** 5,050 rows, 11 columns
 	* **Size (After Cleaning):** 5,050 rows, 10 columns
 * **Restaurant Data:** Order ID, Order Date, Menu Item Name, Menu Item Category, Menu Item Price, Menu Item Size, Menu Item Quantity, Customer First Name, Customer Last Name, Delivery, Delivery Address
@@ -120,7 +120,7 @@ df = df.drop(columns=["customer_first_name", "customer_last_name"])
 print(df["customer_name"].head(10))
 ```
 
-An in-depth [**Jupyter Notebook**](https://github.com/SunehraFarhana/Pizza-Restaurant-Data-Analysis/blob/6dd22a54ee1f235bb2550b9235c5feff20fc96af/pizza_restaurant_dataset_cleaning.ipynb) detailing every step of the data cleaning process is available in this repository.
+An in-depth [**Jupyter Notebook**](https://github.com/SunehraFarhana/Pizza-Restaurant-Data-Analysis/blob/e1c65378cdf4d8f660f81edbe649bc66c59304f4/pizza_restaurant_dataset_cleaning.ipynb) detailing every step of the data cleaning process is available in this repository.
 
 ---
 ## Exploratory Data Analysis in MySQL Workbench
@@ -193,7 +193,7 @@ LIMIT 15;
 ```
 <img width="293" height="270" alt="pizza_restaurant_sql_5" src="https://github.com/user-attachments/assets/322e8491-44b0-4096-a190-c068fe47ad0a" />
 
-An in-depth [**SQL file**](https://github.com/SunehraFarhana/Pizza-Restaurant-Data-Analysis/blob/be4c76d8fe5b8dcb31fbdb1182698af518e6ae81/pizza_restaurant_queries.sql) detailing every step of the querying process is available in this repository.
+An in-depth [**SQL file**](https://github.com/SunehraFarhana/Pizza-Restaurant-Data-Analysis/blob/e1c65378cdf4d8f660f81edbe649bc66c59304f4/pizza_restaurant_queries.sql) detailing every step of the querying process is available in this repository.
 
 ---
 ## Visualizations in Tableau Public
